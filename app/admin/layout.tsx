@@ -6,48 +6,32 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div style={{ display: "flex", minHeight: "100vh" }}>
-      <aside
-        style={{
-          width: "200px",
-          backgroundColor: "#f5f5f5",
-          borderRight: "1px solid #ddd",
-          padding: "20px",
-        }}
-      >
+    <div className="flex min-h-screen">
+      <aside className="w-[200px] bg-gray-100 border-r border-gray-300 p-5">
         <nav>
-          <div style={{ marginBottom: "10px" }}>
-            <Link href="/admin" style={{ color: "#333", textDecoration: "none" }}>
+          <div className="mb-3">
+            <Link href="/admin" className="text-gray-800 no-underline">
               Dashboard
             </Link>
           </div>
-          <div style={{ marginBottom: "10px" }}>
-            <Link
-              href="/admin/events"
-              style={{ color: "#333", textDecoration: "none" }}
-            >
+          <div className="mb-3">
+            <Link href="/admin/events" className="text-gray-800 no-underline">
               Events
             </Link>
           </div>
-          <div style={{ marginBottom: "10px" }}>
-            <Link
-              href="/admin/dataset-a"
-              style={{ color: "#333", textDecoration: "none" }}
-            >
+          <div className="mb-3">
+            <Link href="/admin/dataset-a" className="text-gray-800 no-underline">
               Dataset A
             </Link>
           </div>
-          <div style={{ marginBottom: "10px" }}>
-            <Link
-              href="/admin/dataset-b"
-              style={{ color: "#333", textDecoration: "none" }}
-            >
+          <div className="mb-3">
+            <Link href="/admin/dataset-b" className="text-gray-800 no-underline">
               Dataset B
             </Link>
           </div>
         </nav>
       </aside>
-      <main style={{ flex: 1, padding: "20px" }}>{children}</main>
+      <main className="flex-1 p-5">{children}</main>
     </div>
   );
 }

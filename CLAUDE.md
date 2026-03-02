@@ -127,3 +127,18 @@ When asked to simplify:
 - Do not change type definitions globally
 - Do not alter route handling structure
 - Preserve working behavior over aesthetic cleanup
+
+---
+
+## 10. Styling Rule
+
+This project uses **Tailwind CSS exclusively**.
+
+Claude must:
+
+- **ALWAYS** use Tailwind CSS classes for styling
+- **NEVER** use inline styles (style prop)
+- **NEVER** use CSS-in-JS libraries
+- **NEVER** create separate CSS/SCSS files
+
+All styling must be done with Tailwind utility classes.

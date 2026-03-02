@@ -20,14 +20,14 @@ export default async function DatasetADetailPage({
   return (
     <div>
       <h1>Dataset A Detail</h1>
-      <div style={{ border: "1px solid #ddd", padding: "20px" }}>
-        <div style={{ marginBottom: "10px" }}>
+      <div className="border border-gray-300 p-5">
+        <div className="mb-3">
           <strong>ID:</strong> {item.id}
         </div>
-        <div style={{ marginBottom: "10px" }}>
+        <div className="mb-3">
           <strong>Title:</strong> {item.title}
         </div>
-        <div style={{ marginBottom: "10px" }}>
+        <div className="mb-3">
           <strong>Status:</strong> {item.status}
         </div>
       </div>
