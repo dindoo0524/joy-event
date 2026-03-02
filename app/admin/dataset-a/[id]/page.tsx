@@ -3,7 +3,7 @@ export default async function DatasetADetailPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const { id } = params;
+  const { id } = await params;
 
   const items = [
     { id: "1", title: "Item One", status: "active" },
