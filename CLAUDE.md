@@ -88,3 +88,42 @@ Avoid:
 ---
 
 Claude should act as a focused implementation assistant, not a product visionary.`
+
+
+
+## 7. Framework Version Awareness
+
+This project uses:
+
+- Next.js 16
+- App Router
+- params may be Promise-based
+
+Claude must:
+
+- Assume Next.js 16 behavior
+- Respect async params handling if required
+- Avoid suggesting outdated Next 13/14 patterns
+- Do not remove async/await from route params without verifying compatibility
+
+If uncertain about framework behavior, ask before refactoring.
+
+## 8. Version-Sensitive Code Rule
+
+Before refactoring:
+
+- Consider framework version differences
+- Do not assume older patterns
+- Do not simplify code if version-specific behavior exists
+
+Prefer compatibility over theoretical simplification.
+
+
+## 9. Refactor Boundaries
+
+When asked to simplify:
+
+- Only refactor the requested file
+- Do not change type definitions globally
+- Do not alter route handling structure
+- Preserve working behavior over aesthetic cleanup
