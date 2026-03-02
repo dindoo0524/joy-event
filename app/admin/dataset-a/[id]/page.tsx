@@ -3,15 +3,15 @@ export default async function DatasetADetailPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const { id } = await params;
+  const { id } = params;
 
   const items = [
-    { id: 1, title: "Item One", status: "active" },
-    { id: 2, title: "Item Two", status: "pending" },
-    { id: 3, title: "Item Three", status: "inactive" },
+    { id: "1", title: "Item One", status: "active" },
+    { id: "2", title: "Item Two", status: "pending" },
+    { id: "3", title: "Item Three", status: "inactive" },
   ];
 
-  const item = items.find((i) => i.id === parseInt(id));
+  const item = items.find((i) => i.id === id);
 
   if (!item) {
     return <div>Not Found</div>;
